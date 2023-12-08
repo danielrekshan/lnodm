@@ -1,0 +1,59 @@
+Column,Origin,Description
+updb_id,UPDB,Unique ID from UPDB for UAP sightings
+category,data_source,UAP or HICE event
+data_source,manual,"Unique origin of data, e.g., name for each different type of survey or reporting center"
+date,original record,As reported in original sources
+description,original record,Description of event written by experiencer
+location,original record,Location of event as collected by unique datasource
+city,"geopy, Nominatim",City extracted from location
+state,"geopy, Nominatim",State or region extracted from location
+country,"geopy, Nominatim",Country code extracted from region
+user_id,Light Net,"Unique ID per user or network derived from Light Net data, initially included to give indication of how many unique users reported data"
+contact_type_raw,Light Net,Concatenated string of applicable contact types derived from various surveys
+method_raw,Light Net,Concatenated string of applicable contact methods derived from various surveys
+sunspots,SIDC,Number of sunspots per day
+formated_date,datetime,Date of event formatted as DD/MM/YYYY
+moon_phase,ephem,"Percent of moon illuminated, 0 iis new moon and 1 is full moon"
+language,spacy,Language code
+word_count,space,Number of tokens
+summary,summa,Text summary
+keywords,summa,Extracted keywords
+stemmed,nltk,Porter stem of keywords using nltk
+saw,regex,Number of matches over word count
+mind,regex,Number of matches over word count
+heard,regex,Number of matches over word count
+embodied,regex,Number of matches over word count
+ce5,regex,Number of matches over word count
+dream,regex,Number of matches over word count
+bodymark,regex,Number of matches over word count
+entity,regex,Number of matches over word count
+pulse,regex,Number of matches over word count
+shape_triangle,regex,Number of matches over word count
+shape_orb,regex,Number of matches over word count
+shape_circle,regex,Number of matches over word count
+shape_rectangle,regex,Number of matches over word count
+shape_cigar,regex,Number of matches over word count
+shape_fireball,regex,Number of matches over word count
+shape_disk,regex,Number of matches over word count
+shape,regex,Most common shape
+fear,NRCLex,Score from 0 to 1 of emotion
+anger,NRCLex,Score from 0 to 1 of emotion
+anticip,NRCLex,Score from 0 to 1 of emotion
+trust,NRCLex,Score from 0 to 1 of emotion
+surprise,NRCLex,Score from 0 to 1 of emotion
+positive,NRCLex,Score from 0 to 1 of emotion
+negative,NRCLex,Score from 0 to 1 of emotion
+sadness,NRCLex,Score from 0 to 1 of emotion
+disgust,NRCLex,Score from 0 to 1 of emotion
+joy,NRCLex,Score from 0 to 1 of emotion
+anticipation,NRCLex,Score from 0 to 1 of emotion
+emotion,NRCLex,Highest scoring emotion
+neg,vaderSentiment,Percent negative score
+neu,vaderSentiment,Percent neutral score
+pos,vaderSentiment,Percent positive score
+compound,vaderSentiment,Compound score
+sentiment,vaderSentiment,Classification based upon +/- 0.05 compound scores
+Document,BERTopic,Keywords used to classify document
+Topic,BERTopic,Classified topic
+Name,BERTopic,Name of classified topic
+Probability,BERTopic,Probability of topic classification
